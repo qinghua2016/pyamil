@@ -5,7 +5,7 @@ import gzip
 import json
 import sys
 from cStringIO import StringIO
-print('------天气查询------')
+print('------天气查询------'+'/')
 def gzip_uncompress(c_data):
     buf = StringIO(c_data)
     f = gzip.GzipFile(mode = 'rb', fileobj = buf)
@@ -38,15 +38,16 @@ def show_weather(weather_data):
         print('你输入的城市名有误，或者天气中心未收录你所在城市')
     elif weather_dict.get('desc') =='OK':
         forecast = weather_dict.get('data').get('forecast')
-        print(u'城市：'+weather_dict.get('data').get('city'))
-        print(u'温度：'+weather_dict.get('data').get('wendu')+u'℃ ')
-        print(u'感冒：'+weather_dict.get('data').get('ganmao'))
-        print(u'风向：'+forecast[0].get('fengxiang'))
-        print(u'风级：'+forecast[0].get('fengli'))
-        print(u'高温：'+forecast[0].get('high'))
-        print(u'低温：'+forecast[0].get('low'))
-        print(u'天气：'+forecast[0].get('type'))
-        print(u'日期：'+forecast[0].get('date'))
+
+        print(u'城市：'+weather_dict.get('data').get('city')+'/')
+        print(u'温度：'+weather_dict.get('data').get('wendu')+u'℃ '+'/')
+        print(u'感冒：'+weather_dict.get('data').get('ganmao')+'/')
+        print(u'风向：'+forecast[0].get('fengxiang')+'/')
+        print(u'风级：'+forecast[0].get('fengli')+'/')
+        print(u'高温：'+forecast[0].get('high')+'/')
+        print(u'低温：'+forecast[0].get('low')+'/')
+        print(u'天气：'+forecast[0].get('type')+'/')
+        print(u'日期：'+forecast[0].get('date')+'/')
         # print('*******************************')
     #     four_day_forecast =raw_input('是否要显示未来四天天气，是/否：')
     #     if four_day_forecast == '是' or 'Y' or 'y':

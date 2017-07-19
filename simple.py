@@ -23,9 +23,9 @@ k.respond("load aiml cn")
 # line and printing responses.
 def match_aiml(query):
     # query=raw_input("> ")
-    response = k.respond(query)
+    response = k.respond(query).decode('utf-8')
 
-    return response
+    return response.split('/')
 
 
 
