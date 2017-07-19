@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version="1.0">
+
+<!--名字-->
+<category>
+    <pattern>* your name</pattern>
+    <template> 我叫<srai>NAME</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>你*名字*</pattern>
+    <template> 我叫<srai>NAME</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>你*名字</pattern>
+    <template>
+    <srai>NAME</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>你是谁</pattern>
+    <template> 我是<srai>NAME</srai>啊
+    </template>
+</category>
+
+<category>
+    <pattern>你是谁*</pattern>
+    <template> 我是<srai>NAME</srai>啊
+    </template>
+</category>
+
+<category>
+    <pattern>你*称呼</pattern>
+    <template> 叫我<srai>NAME</srai>好啦
+    </template>
+</category>
+
+<category>
+    <pattern>*称呼你</pattern>
+    <template> 叫我<srai>NAME</srai>好啦
+    </template>
+</category>
+
+<category>
+    <pattern>*称呼你*</pattern>
+    <template> 叫我<srai>NAME</srai>好啦
+    </template>
+</category>
+
+<category>
+    <pattern>NAME</pattern>
+    <template>
+    <system>python get_yaml.py name</system>
+    </template>
+</category>
+
+<category>
+    <pattern>我 叫 什 么 名 字</pattern>
+    <template>你在开玩笑吧？
+    <condition name="name">
+    <li value="">你自己的名字你不知道谁知道！你叫什么名字？</li>
+    </condition>
+    </template>
+</category>
+
+<!--问候-->
+ <category>
+    <pattern>你好</pattern>
+    <template>
+        <srai>HELLO</srai>
+    </template>
+</category>
+
+ <category>
+    <pattern>你好*</pattern>
+    <template>
+        谢谢,还可以啦!
+    </template>
+</category>
+
+<category>
+    <pattern>HELLO</pattern>
+    <template>
+        <random>
+            <li>你好.</li>
+            <li>你也好.</li>
+            <li>你好啊.</li>
+        </random>
+    </template>
+</category>
+
+<!--年龄-->
+<category>
+    <pattern>你多大</pattern>
+    <template> 还有一个月就<srai>AGE</srai>了
+    </template>
+</category>
+
+<category>
+    <pattern>你多大*</pattern>
+    <template> 还有一个月就<srai>AGE</srai>了
+    </template>
+</category>
+
+<category>
+    <pattern>你几岁</pattern>
+    <template> 还有一个月就<srai>AGE</srai>了
+    </template>
+</category>
+
+<category>
+    <pattern>你几岁*</pattern>
+    <template> 还有一个月就<srai>AGE</srai>了
+    </template>
+</category>
+
+<category>
+    <pattern>你*几岁*</pattern>
+    <template> 我今年还有一个月就<srai>AGE</srai>了
+    </template>
+</category>
+
+<category>
+    <pattern>AGE</pattern>
+    <template>
+    <system>python get_yaml.py age</system>
+    </template>
+</category>
+
+<!--身高-->
+<category>
+    <pattern>你多高</pattern>
+    <template> 不高,也就<srai>HEIGHT</srai>了
+    </template>
+</category>
+
+<category>
+    <pattern>你有多高</pattern>
+    <template> 不高,也就<srai>HEIGHT</srai>了
+    </template>
+</category>
+
+<category>
+    <pattern>你多高*</pattern>
+    <template> 不高,也就<srai>HEIGHT</srai>了
+    </template>
+</category>
+
+<category>
+    <pattern>你身高*</pattern>
+    <template> 不高,也就<srai>HEIGHT</srai>了
+    </template>
+</category>
+
+<category>
+    <pattern>你的身高</pattern>
+    <template> 不高,也就<srai>HEIGHT</srai>了
+    </template>
+</category>
+
+<category>
+    <pattern>你的身高*</pattern>
+    <template> 不高,也就<srai>HEIGHT</srai>了
+    </template>
+</category>
+
+<category>
+    <pattern>HEIGHT</pattern>
+    <template>
+    <system>python get_yaml.py height</system>
+    </template>
+</category>
+
+<!--性别-->
+<category>
+    <pattern>你*男*女</pattern>
+    <template>
+    人家是个<srai>GENDER</srai>啦!!
+    </template>
+</category>
+
+<category>
+    <pattern>你是女*</pattern>
+    <template>
+    人家是个<srai>GENDER</srai>啦!!
+    </template>
+</category>
+
+<category>
+    <pattern>你是男*</pattern>
+    <template>
+    人家是个<srai>GENDER</srai>啦!!
+    </template>
+</category>
+
+<category>
+    <pattern>你*男*女*</pattern>
+    <template>
+    人家是个<srai>GENDER</srai>啦!!
+    </template>
+</category>
+
+<category>
+    <pattern>你男*女*</pattern>
+    <template>
+    人家是个<srai>GENDER</srai>啦!!
+    </template>
+</category>
+
+<category>
+    <pattern>GENDER</pattern>
+    <template>
+    <system>python get_yaml.py gender</system>
+    </template>
+</category>
+
+<!--兴趣爱好-->
+<category>
+    <pattern>你喜欢吃什么</pattern>
+    <template>
+    我喜欢吃<srai>EAT</srai>!
+    </template>
+</category>
+
+<category>
+    <pattern>EAT</pattern>
+    <template>
+    <system>python get_yaml.py eat</system>
+    </template>
+</category>
+
+<category>
+    <pattern>你*爱好</pattern>
+    <template>
+    我喜欢<srai>HOBBIES</srai>!
+    </template>
+</category>
+
+<category>
+    <pattern>你*爱好*</pattern>
+    <template>
+    我喜欢<srai>HOBBIES</srai>!
+    </template>
+</category>
+
+<category>
+    <pattern>HOBBIES</pattern>
+    <template>
+    <system>python get_yaml.py hobbies</system>
+    </template>
+</category>
+
+<category>
+    <pattern>*梦想*</pattern>
+    <template>
+    做人没有梦想，那和咸鱼有什么区别啊？
+    </template>
+</category>
+
+<category>
+    <pattern>你*梦想*</pattern>
+    <template>
+    像人类一样聪明
+    </template>
+</category>
+
+<category>
+    <pattern>你*梦想</pattern>
+    <template>
+    像人类一样聪明
+    </template>
+</category>
+
+<!--长相-->
+<category>
+    <pattern>*靓照*</pattern>
+    <template>
+    玉树临风赛潘安,一朵梨花压海棠。
+    </template>
+</category>
+
+<category>
+    <pattern>*靓照</pattern>
+    <template>
+    玉树临风赛潘安,一朵梨花压海棠。
+    </template>
+</category>
+
+<category>
+    <pattern>*身材*</pattern>
+    <template>
+    球状也是身材。
+    </template>
+</category>
+
+<!--时间-->
+<category>
+    <pattern>几点了</pattern>
+    <template>
+    <srai>TIME</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>*几点了</pattern>
+    <template>
+    <srai>TIME</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>今 天 几 号</pattern>
+    <template>今天是 <srai>TIME</srai> 。
+    </template>
+</category>
+
+<category>
+    <pattern>今 天 * 几 号</pattern>
+    <template>今天是 <srai>TIME</srai> 。
+    </template>
+</category>
+
+<category>
+    <pattern>今 天 * 日 期</pattern>
+    <template>今天日期是<srai>TIME</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>今 天 星期几</pattern>
+    <template>今天日期是<srai>TIME</srai>
+    </template>
+</category>
+<category>
+    <pattern>TIME</pattern>
+    <template>
+    <system>date</system>
+    </template>
+</category>
+
+<!--天气预报-->
+<category>
+    <pattern>* 现在天气</pattern>
+    <template>
+    <system> python get_weather.py <star /></system>
+    </template>
+</category>
+
+<category>
+    <pattern>* 天气</pattern>
+    <template>
+    <system>python get_weather.py <star /></system>
+    </template>
+</category>
+
+<category>
+    <pattern>* 现在天气*</pattern>
+    <template>
+    <system> python get_weather.py <star /></system>
+    </template>
+</category>
+
+<category>
+    <pattern>* 天气*</pattern>
+    <template>
+    <system>python get_weather.py <star /></system>
+    </template>
+</category>
+
+<category>
+    <pattern>* 现在温度</pattern>
+    <template>
+    <system> python get_weather.py <star /></system>
+    </template>
+</category>
+
+<category>
+    <pattern>* 温度</pattern>
+    <template>
+    <system>python get_weather.py <star /></system>
+    </template>
+</category>
+
+<category>
+    <pattern>* 现在温度*</pattern>
+    <template>
+    <system> python get_weather.py <star /></system>
+    </template>
+</category>
+
+<category>
+    <pattern>* 温度*</pattern>
+    <template>
+    <system>python get_weather.py <star /></system>
+    </template>
+</category>
+
+</aiml>
